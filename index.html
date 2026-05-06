@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santa Marta Viva — Turismo en el Caribe Colombiano</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">Santa Marta <span>Viva</span></div>
+    <ul class="nav-links">
+      <li><a href="#tours">Tours</a></li>
+      <li><a href="#guias">Guías</a></li>
+      <li><a href="#destinos">Destinos</a></li>
+      <li><a href="#planes">Planes</a></li>
+      <li><a href="/html/Acerca.html">Acerca de nosotros</a></li>
+      <li><a href="#contacto" class="nav-cta">Reservar</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-gradient"></div>
+      <div class="hero-waves">
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path d="M0,160 C360,300 1080,20 1440,160 L1440,320 L0,320 Z" fill="rgba(255,255,255,0.04)"/>
+          <path d="M0,220 C480,80 960,320 1440,200 L1440,320 L0,320 Z" fill="rgba(255,255,255,0.06)"/>
+        </svg>
+      </div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">La ciudad más antigua de Colombia</p>
+      <h1 class="hero-title">
+        Descubre<br/>
+        <em>Santa Marta</em>
+      </h1>
+      <p class="hero-sub">Sierra Nevada, selva tropical, playas del Caribe y la magia de la Ciudad Perdida — todo en un solo destino.</p>
+      <div class="hero-actions">
+        <a href="#tours" class="btn-primary">Ver tours</a>
+        <a href="#destinos" class="btn-ghost">Explorar destinos</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span>2026</span><p>Año de fundación</p></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span>+650</span><p>Especies de aves</p></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span>+25</span><p>Puntos de buceo</p></div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- TOURS -->
+  <section class="section tours-section" id="tours">
+    <div class="section-header">
+      <p class="label">Experiencias</p>
+      <h2>Tours <em>disponibles</em></h2>
+      <p class="section-desc">Desde la selva profunda hasta las aguas cristalinas del Caribe — elige tu aventura.</p>
+    </div>
+
+    <div class="tours-filter">
+      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="naturaleza">Naturaleza</button>
+      <button class="filter-btn" data-filter="cultura">Cultura</button>
+      <button class="filter-btn" data-filter="aventura">Aventura</button>
+      <button class="filter-btn" data-filter="playa">Playa</button>
+    </div>
+
+    <div class="tours-grid" id="toursGrid">
+
+      <div class="tour-card" data-cat="aventura cultura">
+        <div class="tour-img t1">
+          <img src="https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?w=700&q=80" alt="Trekking Ciudad Perdida Sierra Nevada" loading="lazy" />
+          <div class="tour-badge">⭐ Más popular</div>
+          <div class="tour-tag">4-5 días</div>
+        </div>
+        <div class="tour-body">
+          <div class="tour-cat">Aventura · Cultura</div>
+          <h3>Trekking Ciudad Perdida</h3>
+          <p>Camina hasta el sitio arqueológico más impresionante de Colombia, oculto en la Sierra Nevada entre selva, ríos y comunidades indígenas Kogi y Wiwa.</p>
+          <ul class="tour-features">
+            <li>🥾 46 km de sendero</li>
+            <li>🏕️ Campamentos en ruta</li>
+            <li>🌿 Guías nativos indígenas</li>
+            <li>🍽️ Comidas incluidas</li>
+          </ul>
+          <div class="tour-footer">
+            <div class="tour-price">Desde <strong>$580.000 COP</strong></div>
+            <button class="btn-card" onclick="openModal('ciudad-perdida')">Ver plan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tour-card" data-cat="naturaleza playa">
+        <div class="tour-img t2">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=80" alt="Parque Tayrona playa caribe Colombia" loading="lazy" />
+          <div class="tour-tag">1 día</div>
+        </div>
+        <div class="tour-body">
+          <div class="tour-cat">Naturaleza · Playa</div>
+          <h3>Parque Tayrona — Playa Cristal</h3>
+          <p>Visita una de las reservas ecológicas más importantes de Colombia. Playas de arena blanca, snorkel entre corales y caminata por selva tropical.</p>
+          <ul class="tour-features">
+            <li>🐠 Snorkel incluido</li>
+            <li>🚤 Transporte en lancha</li>
+            <li>🌊 Mirador de las 7 olas</li>
+            <li>🦎 Flora y fauna única</li>
+          </ul>
+          <div class="tour-footer">
+            <div class="tour-price">Desde <strong>$120.000 COP</strong></div>
+            <button class="btn-card" onclick="openModal('tayrona')">Ver plan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tour-card" data-cat="naturaleza cultura">
+        <div class="tour-img t3">
+          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=700&q=80" alt="Selva y cascadas Minca Sierra Nevada" loading="lazy" />
+          <div class="tour-tag">1 día</div>
+        </div>
+        <div class="tour-body">
+          <div class="tour-cat">Naturaleza · Cultura</div>
+          <h3>Minca — Café, Cacao y Cascadas</h3>
+          <p>Sube a los pies de la Sierra Nevada y aprende a hacer café y chocolate artesanal. Termina con un refrescante baño en cascadas de agua pura de montaña.</p>
+          <ul class="tour-features">
+            <li>☕ Taller de café y cacao</li>
+            <li>💦 Baño en cascadas</li>
+            <li>🦜 Avistamiento de aves</li>
+            <li>🚐 Transporte desde hotel</li>
+          </ul>
+          <div class="tour-footer">
+            <div class="tour-price">Desde <strong>$95.000 COP</strong></div>
+            <button class="btn-card" onclick="openModal('minca')">Ver plan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tour-card" data-cat="playa">
+        <div class="tour-img t4">
+          <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=700&q=80" alt="Playa tropical caribe delfines Colombia" loading="lazy" />
+          <div class="tour-tag">1 día</div>
+        </div>
+        <div class="tour-body">
+          <div class="tour-cat">Playa · Mar</div>
+          <h3>Playa Blanca y Delfines</h3>
+          <p>Navega hacia Playa Blanca, una de las playas más hermosas del Caribe colombiano. En el camino, espectáculo de delfines en Mundo Marino.</p>
+          <ul class="tour-features">
+            <li>🐬 Avistamiento de delfines</li>
+            <li>🏖️ Playa virgen</li>
+            <li>⛵ Paseo en barco</li>
+            <li>🤿 Snorkel opcional</li>
+          </ul>
+          <div class="tour-footer">
+            <div class="tour-price">Desde <strong>$110.000 COP</strong></div>
+            <button class="btn-card" onclick="openModal('playa-blanca')">Ver plan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tour-card" data-cat="cultura">
+        <div class="tour-img t5">
+          <img src="https://www.santamartacolombia.com.co/wp-content/uploads/2024/09/santamarta5.jpg" alt="Catedral Basílica Santa Marta Colombia" loading="lazy" />
+          <div class="tour-tag">3.5 horas</div>
+        </div>
+        <div class="tour-body">
+          <div class="tour-cat">Cultura · Historia</div>
+          <h3>Free Tour Centro Histórico</h3>
+          <p>Recorre las calles coloniales de la ciudad más antigua de Colombia. Catedral Basílica, Quinta de San Pedro Alejandrino, Museo del Oro Tayrona y el Malecón.</p>
+          <ul class="tour-features">
+            <li>🏛️ Quinta San Pedro Alejandrino</li>
+            <li>⛪ Catedral Basílica</li>
+            <li>🏺 Museo del Oro Tayrona</li>
+            <li>🌅 Vista bahía de Santa Marta</li>
+          </ul>
+          <div class="tour-footer">
+            <div class="tour-price">Desde <strong>$45.000 COP</strong></div>
+            <button class="btn-card" onclick="openModal('free-tour')">Ver plan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tour-card" data-cat="aventura playa">
+        <div class="tour-img t6">
+          <img src="https://images.unsplash.com/photo-1566438480900-0609be27a4be?w=700&q=80" alt="Velero atardecer mar caribe Taganga" loading="lazy" />
+          <div class="tour-tag">Tarde</div>
+        </div>
+        <div class="tour-body">
+          <div class="tour-cat">Aventura · Playa</div>
+          <h3>Velero al Atardecer en Taganga</h3>
+          <p>Embárcate en un velero y contempla una de las puestas de sol más bellas del Caribe colombiano desde la bahía de Taganga. Plan romántico e inolvidable.</p>
+          <ul class="tour-features">
+            <li>⛵ Velero privado</li>
+            <li>🌅 Puesta de sol</li>
+            <li>🍹 Bebidas incluidas</li>
+            <li>📸 Momento fotográfico único</li>
+          </ul>
+          <div class="tour-footer">
+            <div class="tour-price">Desde <strong>$75.000 COP</strong></div>
+            <button class="btn-card" onclick="openModal('velero')">Ver plan</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GUIAS -->
+  <section class="section guias-section" id="guias">
+    <div class="section-header light">
+      <p class="label">Nuestro equipo</p>
+      <h2>Conoce a tus <em>guías</em></h2>
+      <p class="section-desc">Profesionales certificados, apasionados por Santa Marta y su historia.</p>
+    </div>
+
+    <div class="guias-grid">
+
+      <div class="guia-card">
+        <div class="guia-avatar g1">
+          <div class="guia-badge">⭐ Certificado</div>
+        </div>
+        <div class="guia-info">
+          <h3>Esneider Romero</h3>
+          <p class="guia-esp">Sierra Nevada · Ciudad Perdida</p>
+          <p class="guia-bio">Guía certificado con más de 8 años liderando expediciones a la Ciudad Perdida. Conocedor profundo de la Sierra Nevada y las culturas Kogi, Arhuaco y Wiwa. Habla español e inglés básico.</p>
+          <div class="guia-tags">
+            <span>Trekking</span>
+            <span>Cultura indígena</span>
+            <span>Sierra Nevada</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="guia-card">
+        <div class="guia-avatar g2">
+          <div class="guia-badge">⭐ Certificada</div>
+        </div>
+        <div class="guia-info">
+          <h3>Blanca Martínez</h3>
+          <p class="guia-esp">Ciudad Perdida · Ecoturismo</p>
+          <p class="guia-bio">Una de las guías más reconocidas del Magdalena. Apasionada por la historia Tayrona y el ecoturismo responsable. Bilingüe español-inglés, con más de 500 expediciones completadas.</p>
+          <div class="guia-tags">
+            <span>Ecoturismo</span>
+            <span>Bilingüe</span>
+            <span>Historia Tayrona</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="guia-card">
+        <div class="guia-avatar g3">
+          <div class="guia-badge">⭐ Certificado</div>
+        </div>
+        <div class="guia-info">
+          <h3>Adrián Ospino</h3>
+          <p class="guia-esp">Tayrona · Playa · Buceo</p>
+          <p class="guia-bio">Instructor PADI certificado y guía del Parque Tayrona. Experto en los más de 25 puntos de buceo del área. Apasionado por la vida marina y la conservación del arrecife coralino.</p>
+          <div class="guia-tags">
+            <span>Buceo PADI</span>
+            <span>Tayrona</span>
+            <span>Snorkel</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="guia-card">
+        <div class="guia-avatar g4">
+          <div class="guia-badge">⭐ Certificada</div>
+        </div>
+        <div class="guia-info">
+          <h3>Camila Orozco</h3>
+          <p class="guia-esp">Centro Histórico · Gastronomía</p>
+          <p class="guia-bio">Guía oficial del centro histórico de Santa Marta. Especializada en rutas culturales, historia colonial y gastronomía caribeña. Conduce los free tours más valorados de la ciudad.</p>
+          <div class="guia-tags">
+            <span>Historia colonial</span>
+            <span>Gastronomía</span>
+            <span>Free tours</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DESTINOS -->
+  <section class="section destinos-section" id="destinos">
+    <div class="section-header">
+      <p class="label">Lugares imperdibles</p>
+      <h2>Destinos <em>destacados</em></h2>
+    </div>
+
+    <div class="destinos-mosaic">
+      <div class="destino-item d1">
+        <div class="destino-overlay">
+          <h3>Ciudad Perdida</h3>
+          <p>Teyuna — El corazón de la Sierra Nevada</p>
+        </div>
+      </div>
+      <div class="destino-item d2">
+        <div class="destino-overlay">
+          <h3>Parque Tayrona</h3>
+          <p>Selva, arrecifes y playas vírgenes</p>
+        </div>
+      </div>
+      <div class="destino-item d3">
+        <div class="destino-overlay">
+          <h3>Minca</h3>
+          <p>Café de altura y naturaleza pura</p>
+        </div>
+      </div>
+      <div class="destino-item d4">
+        <div class="destino-overlay">
+          <h3>Taganga</h3>
+          <p>El pueblo de los buzos y atardeceres</p>
+        </div>
+      </div>
+      <div class="destino-item d5">
+        <div class="destino-overlay">
+          <h3>Centro Histórico</h3>
+          <p>La ciudad más antigua de Colombia</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANES -->
+  <section class="section planes-section" id="planes">
+    <div class="section-header light">
+      <p class="label">Paquetes completos</p>
+      <h2>Planes <em>turísticos</em></h2>
+      <p class="section-desc">Todo incluido para que solo te preocupes por disfrutar.</p>
+    </div>
+
+    <div class="planes-grid">
+      <div class="plan-card">
+        <div class="plan-header">
+          <div class="plan-icon">🌊</div>
+          <div>
+            <div class="plan-name">Plan Caribe</div>
+            <div class="plan-duracion">3 días / 2 noches</div>
+          </div>
+        </div>
+        <div class="plan-price">Desde <strong>$450.000</strong> <span>por persona</span></div>
+        <ul class="plan-includes">
+          <li>✓ 2 noches de alojamiento</li>
+          <li>✓ Tour Parque Tayrona</li>
+          <li>✓ Paseo en velero Taganga</li>
+          <li>✓ Desayunos incluidos</li>
+          <li>✓ Guía certificado</li>
+          <li>✓ Transporte local</li>
+        </ul>
+        <button class="btn-plan" onclick="openModal('plan-caribe')">Reservar ahora</button>
+      </div>
+
+      <div class="plan-card featured">
+        <div class="plan-badge">Más vendido</div>
+        <div class="plan-header">
+          <div class="plan-icon">🏔️</div>
+          <div>
+            <div class="plan-name">Plan Sierra</div>
+            <div class="plan-duracion">5 días / 4 noches</div>
+          </div>
+        </div>
+        <div class="plan-price">Desde <strong>$980.000</strong> <span>por persona</span></div>
+        <ul class="plan-includes">
+          <li>✓ Trekking Ciudad Perdida (4 días)</li>
+          <li>✓ Tour centro histórico</li>
+          <li>✓ Campamentos y comidas en ruta</li>
+          <li>✓ Guías nativos indígenas</li>
+          <li>✓ Kit de equipo de senderismo</li>
+          <li>✓ Traslados aeropuerto</li>
+        </ul>
+        <button class="btn-plan" onclick="openModal('plan-sierra')">Reservar ahora</button>
+      </div>
+
+      <div class="plan-card">
+        <div class="plan-header">
+          <div class="plan-icon">✨</div>
+          <div>
+            <div class="plan-name">Plan Todo Santa Marta</div>
+            <div class="plan-duracion">7 días / 6 noches</div>
+          </div>
+        </div>
+        <div class="plan-price">Desde <strong>$1.580.000</strong> <span>por persona</span></div>
+        <ul class="plan-includes">
+          <li>✓ Ciudad Perdida completa</li>
+          <li>✓ Tayrona Playa Cristal</li>
+          <li>✓ Minca café y cascadas</li>
+          <li>✓ Velero atardecer Taganga</li>
+          <li>✓ Free tour histórico</li>
+          <li>✓ Playa Blanca y delfines</li>
+          <li>✓ Todos los traslados</li>
+        </ul>
+        <button class="btn-plan" onclick="openModal('plan-total')">Reservar ahora</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="section testimonios-section">
+    <div class="section-header">
+      <p class="label">Opiniones reales</p>
+      <h2>Lo que dicen <em>los viajeros</em></h2>
+    </div>
+    <div class="testimonios-slider" id="slider">
+      <div class="testimonio">
+        <div class="t-stars">★★★★★</div>
+        <p>"Hicimos el tour de Ciudad Perdida con Esneider y fue una experiencia increíble. El paisaje es impresionante y la organización estuvo perfecta en todo momento. Los recomendamos 100%."</p>
+        <div class="t-autor">— Mariana & Juan Pablo, Bogotá</div>
+      </div>
+      <div class="testimonio">
+        <div class="t-stars">★★★★★</div>
+        <p>"Nuestra guía Blanca es un amor de persona. Siempre atenta, explicaba todo perfectamente y se aseguraba de que nadie se quedara atrás. Una experiencia que deja recuerdos para toda la vida."</p>
+        <div class="t-autor">— Valentina Torres, Medellín</div>
+      </div>
+      <div class="testimonio">
+        <div class="t-stars">★★★★★</div>
+        <p>"El trekking es exigente pero vale cada paso. La selva, los ríos, las comunidades indígenas… llegamos a la Ciudad Perdida y la sensación es única. El equipo de guías marcó la diferencia."</p>
+        <div class="t-autor">— Carlos & Sofía, Cali</div>
+      </div>
+      <div class="testimonio">
+        <div class="t-stars">★★★★★</div>
+        <p>"Minca fue una sorpresa total. El taller de café y cacao estuvo brutal, y las cascadas son preciosas. Camila nos explicó la historia del pueblo con una pasión increíble. Volveré."</p>
+        <div class="t-autor">— Daniela Ríos, Barranquilla</div>
+      </div>
+    </div>
+    <div class="slider-dots" id="sliderDots"></div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section contacto-section" id="contacto">
+    <div class="contacto-inner">
+      <div class="contacto-left">
+        <p class="label">¿Listo para viajar?</p>
+        <h2>Hagamos tu <em>aventura</em> realidad</h2>
+        <p>Escríbenos y te ayudamos a armar el plan perfecto para ti y tu grupo.</p>
+        <div class="contacto-data">
+          <div class="c-item">📍 Santa Marta, Magdalena, Colombia</div>
+          <div class="c-item">📞 +57 315 890 4422</div>
+          <div class="c-item">✉️ hola@santamartaviva.co</div>
+          <div class="c-item">🕐 Lun–Sáb · 8am – 7pm</div>
+        </div>
+      </div>
+      <div class="contacto-right">
+        <div class="contacto-form">
+          <div class="form-group">
+            <label>Nombre completo</label>
+            <input type="text" placeholder="Tu nombre" />
+          </div>
+          <div class="form-group">
+            <label>Correo electrónico</label>
+            <input type="email" placeholder="correo@ejemplo.com" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Teléfono / WhatsApp</label>
+              <input type="tel" placeholder="+57 300 000 0000" />
+            </div>
+            <div class="form-group">
+              <label>N.° de personas</label>
+              <input type="number" placeholder="2" min="1" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Tour de interés</label>
+            <select>
+              <option value="">Selecciona un tour</option>
+              <option>Trekking Ciudad Perdida</option>
+              <option>Parque Tayrona</option>
+              <option>Minca — Café y Cascadas</option>
+              <option>Playa Blanca y Delfines</option>
+              <option>Free Tour Centro Histórico</option>
+              <option>Velero al Atardecer</option>
+              <option>Plan Caribe (3 días)</option>
+              <option>Plan Sierra (5 días)</option>
+              <option>Plan Todo Santa Marta (7 días)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Mensaje</label>
+            <textarea placeholder="Cuéntanos tus fechas, preferencias o preguntas…" rows="3"></textarea>
+          </div>
+          <button class="btn-submit">Enviar consulta →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">Santa Marta <span>Viva</span></div>
+      <p>Turismo responsable y auténtico en el Caribe colombiano.</p>
+      <div class="footer-links">
+        <a href="#tours">Tours</a>
+        <a href="#guias">Guías</a>
+        <a href="#destinos">Destinos</a>
+        <a href="#planes">Planes</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <p class="footer-copy">© 2025 Santa Marta Viva. Hecho con ♥ en Colombia.</p>
+    </div>
+  </footer>
+  <section class="section planes-section">
+    <div>
+        Creadores:
+        -<a href="https://www.instagram.com/cr1stixn_g/?hl=es-la" target="_blank" rel="noopener noreferrer">Cristian Gomez</a> 
+        -<a href="https://www.instagram.com/fallitx__/?hl=es-la" target="_blank" rel="noopener noreferrer">Juan Juyo</a> 
+        -<a href="https://www.instagram.com/juanjuyo_/?hl=es-la" target="_blank" rel="noopener noreferrer">Santiago Falla</a>
+    </div>
+
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box" id="modalBox">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>
