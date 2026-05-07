@@ -1,11 +1,15 @@
 Para iniciar de nuevo:
 
---git remote set-url origin https://github.com/Cristian-60302/SantaMartaTurista.github.io.git
---echo "# Santa Marta Viva" >> README.md
---git add .
---git commit -m "Estructura completa del proyecto Santa Marta Viva"
---git branch -M main
---git push -u origin main
+-git remote set-url origin https://github.com/Cristian-60302/SantaMartaTurista.github.io.git
+
+echo "# Santa Marta Viva" >> README.md
+
+git add .
+git commit -m "Estructura completa del proyecto Santa Marta Viva"
+
+git branch -M main
+
+git push -u origin main
 
 Para crear una copia: 
 
