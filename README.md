@@ -1,21 +1,25 @@
-Para iniciar de nuevo:
+# Caribe Colombiano Vivo
 
-git remote set-url origin https://github.com/Cristian-60302/SantaMartaTurista.github.io.git
+Proyecto academico de turismo sobre el Caribe colombiano. La pagina fue ajustada para funcionar como guia comunitaria, no como agencia de viajes.
 
-echo "# Santa Marta Viva" >> README.md
+## Funciones principales
 
-git add .
+- Destinos del Caribe colombiano: Santa Marta, Cartagena, La Guajira, Palomino, San Andres, Barranquilla, Mompox y Providencia.
+- Fotos reales enlazadas desde Wikimedia Commons.
+- Inicio de sesion conectado a `https://motosmart-api-vercel-github-io.vercel.app/api`.
+- Bitacora para marcar lugares visitados.
+- Resenas de usuarios guardadas en `localStorage`.
+- Esquema SQL en `database/neon-schema.sql` para una futura conexion con Neon mediante backend/API.
 
-git commit -m "Estructura completa del proyecto Santa Marta Viva"
+## API de autenticacion
 
-git branch -M main
+El formulario intenta primero:
 
-git push -u origin main
+- `POST /api/login` con `{ email, password }`
+- `POST /api/register` con `{ name, nombre, email, password }` si el login falla porque el usuario no existe o no esta autenticado
 
+Si la API no responde por red o CORS, el sitio usa un fallback local en `localStorage` para que la bitacora siga funcionando durante la presentacion.
 
-Para crear una copia: 
+## Nota sobre Neon
 
-
-Se necesita acceso de creador y se ejecuta en vs o en una direccion de terminar donde quieren dejar los archivos
-
-git clone https://github.com/Cristian-60302/SantaMartaTurista.github.io.git 
+GitHub Pages es estatico y no debe conectarse directamente a Neon porque expondria usuario, contrasena y cadena de conexion. Para usar Neon en produccion se necesita una API intermedia que reciba login, visitas y resenas, y luego consulte la base de datos.
