@@ -8,6 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet" />
+<<<<<<< HEAD
+=======
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+>>>>>>> 48d2867 (Actualizar pagina turismo Caribe colombiano)
   <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
@@ -21,7 +25,15 @@
     </button>
     <div class="nav-links" id="navLinks">
       <a href="#destinos">Destinos</a>
+<<<<<<< HEAD
       <a href="#rutas">Rutas</a>
+=======
+      <a href="#guias">Guías</a>
+      <a href="#mapa">Mapa</a>
+      <a href="#rutas">Rutas</a>
+      <a href="#planes">Planes</a>
+      <a href="#entidades">Entidades</a>
+>>>>>>> 48d2867 (Actualizar pagina turismo Caribe colombiano)
       <a href="#comunidad">Comunidad</a>
       <a href="#mi-viaje">Mi viaje</a>
       <a href="./html/acerca.html">Acerca</a>
@@ -45,7 +57,11 @@
         </div>
       </div>
       <div class="hero-panel" aria-label="Resumen del sitio">
+<<<<<<< HEAD
         <div><strong>8</strong><span>zonas del Caribe</span></div>
+=======
+        <div><strong>9</strong><span>zonas del Caribe</span></div>
+>>>>>>> 48d2867 (Actualizar pagina turismo Caribe colombiano)
         <div><strong id="heroReviews">0</strong><span>resenas viajeras</span></div>
         <div><strong id="heroVisited">0</strong><span>visitados por ti</span></div>
       </div>
@@ -56,7 +72,11 @@
         <p class="eyebrow">Turismo cultural y natural</p>
         <h2>Una pagina para descubrir, recordar y recomendar.</h2>
       </div>
+<<<<<<< HEAD
       <p>El sitio ahora funciona como una guia abierta: no vende paquetes, no muestra precios ni presiona reservas. Presenta lugares reales, contexto util y una comunidad donde cada usuario puede marcar destinos visitados y dejar opiniones.</p>
+=======
+      <p>El sitio ahora funciona como una guia abierta: no vende paquetes ni presiona reservas. Presenta lugares reales, actividades por punto, guias disponibles, planes sugeridos, entidades de referencia y una comunidad donde cada usuario puede marcar destinos visitados y dejar opiniones.</p>
+>>>>>>> 48d2867 (Actualizar pagina turismo Caribe colombiano)
     </section>
 
     <section class="section destinations" id="destinos">
@@ -75,6 +95,7 @@
       <div class="destination-grid" id="destinationGrid"></div>
     </section>
 
+<<<<<<< HEAD
     <section class="section routes" id="rutas">
       <div class="section-head light">
         <p class="eyebrow">Ideas de viaje</p>
@@ -124,6 +145,101 @@
     </section>
   </main>
 
+=======
+    <section class="section guides" id="guias">
+      <div class="section-head light">
+        <p class="eyebrow">Acompañamiento local</p>
+        <h2>Guías turísticos disponibles</h2>
+        <p>Perfiles para orientar la experiencia: especialidad, idiomas, zonas de trabajo y calificación de viajeros. Inicia sesión para calificar un guía.</p>
+      </div>
+      <div class="guide-grid" id="guideGrid"></div>
+    </section>
+
+    <section class="section map-section" id="mapa">
+      <div class="section-head">
+        <p class="eyebrow">Mapa interactivo</p>
+        <h2>Actividades por ubicación</h2>
+        <p>Selecciona un punto para ver qué se puede hacer, qué guías están relacionados y qué entidades u operadores aparecen como referencia.</p>
+      </div>
+      <div class="map-layout">
+        <div id="activityMap" class="activity-map" aria-label="Mapa de actividades del Caribe colombiano"></div>
+        <aside class="map-panel" id="mapPanel">
+          <p class="eyebrow">Selecciona un punto</p>
+          <h3>Explora actividades</h3>
+          <p>Haz clic en un marcador o en una actividad de la lista para ver detalles.</p>
+        </aside>
+      </div>
+      <div class="activity-list" id="activityList"></div>
+    </section>
+
+    <section class="section routes" id="rutas">
+      <div class="section-head light">
+        <p class="eyebrow">Ideas de viaje</p>
+        <h2>Rutas para armar tu propio recorrido</h2>
+      </div>
+      <div class="route-grid">
+        <article class="route-card">
+          <span>4 dias</span>
+          <h3>Santa Marta natural</h3>
+          <p>Tayrona, Minca, Taganga y centro historico. Ideal para mezclar playa, montana y comida local sin salir del Magdalena.</p>
+        </article>
+        <article class="route-card">
+          <span>6 dias</span>
+          <h3>Guajira y mar abierto</h3>
+          <p>Palomino, Riohacha, Cabo de la Vela y Punta Gallinas. Paisajes deserticos, cultura Wayuu y noches frente al mar.</p>
+        </article>
+        <article class="route-card">
+          <span>7 dias</span>
+          <h3>Historia caribena</h3>
+          <p>Cartagena, Barranquilla, Mompox y Santa Marta. Murallas, carnaval, arquitectura republicana y memoria del rio Magdalena.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section plans" id="planes">
+      <div class="section-head">
+        <p class="eyebrow">Planes sugeridos</p>
+        <h2>Rutas armadas por tipo de viajero</h2>
+        <p>No son reservas directas: son propuestas para comparar actividades, guías y entidades antes de contactar un prestador con RNT vigente.</p>
+      </div>
+      <div class="plan-grid" id="planGrid"></div>
+    </section>
+
+    <section class="section providers" id="entidades">
+      <div class="section-head light">
+        <p class="eyebrow">Verificación y oferta</p>
+        <h2>Empresas y entidades de referencia</h2>
+        <p>Incluye entidades oficiales para validar información y operadores/referentes turísticos que el usuario debe verificar antes de comprar.</p>
+      </div>
+      <div class="provider-grid" id="providerGrid"></div>
+    </section>
+
+    <section class="section community" id="comunidad">
+      <div class="section-head">
+        <p class="eyebrow">Voces viajeras</p>
+        <h2>Resenas de la comunidad</h2>
+        <p>Las opiniones se guardan en este navegador por ahora. El archivo SQL incluido deja lista la estructura para moverlas a Neon con una API.</p>
+      </div>
+      <div class="review-list" id="reviewList"></div>
+    </section>
+
+    <section class="section trip" id="mi-viaje">
+      <div class="trip-card">
+        <div>
+          <p class="eyebrow">Bitacora personal</p>
+          <h2>Mis lugares visitados</h2>
+          <p id="tripText">Inicia sesion para marcar destinos visitados, contar como te fue y orientar a otros viajeros.</p>
+        </div>
+        <div class="trip-actions">
+          <button class="btn primary" id="tripLogin">Iniciar sesion</button>
+          <button class="btn light" id="clearTrip">Limpiar mis datos</button>
+        </div>
+      </div>
+      <div class="visited-grid" id="visitedGrid"></div>
+    </section>
+  </main>
+
+>>>>>>> 48d2867 (Actualizar pagina turismo Caribe colombiano)
   <footer class="footer">
     <div>
       <a class="brand footer-brand" href="#inicio">
@@ -196,6 +312,10 @@
     </form>
   </template>
 
+<<<<<<< HEAD
+=======
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+>>>>>>> 48d2867 (Actualizar pagina turismo Caribe colombiano)
   <script src="./js/script.js"></script>
 </body>
 </html>

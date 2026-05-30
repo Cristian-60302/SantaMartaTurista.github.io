@@ -40,6 +40,65 @@ create table if not exists reviews (
 create index if not exists reviews_place_id_created_at_idx
   on reviews (place_id, created_at desc);
 
+<<<<<<< HEAD
+=======
+create table if not exists guides (
+  id text primary key,
+  name text not null,
+  specialty text not null,
+  zones text[] not null default '{}',
+  languages text[] not null default '{}',
+  bio text not null,
+  image_url text,
+  created_at timestamptz not null default now()
+);
+
+create table if not exists guide_ratings (
+  id uuid primary key default gen_random_uuid(),
+  guide_id text not null references guides(id) on delete cascade,
+  user_id uuid not null references app_users(id) on delete cascade,
+  rating int not null check (rating between 1 and 5),
+  created_at timestamptz not null default now(),
+  unique (guide_id, user_id)
+);
+
+create table if not exists providers (
+  id text primary key,
+  name text not null,
+  type text not null,
+  scope text not null,
+  description text not null,
+  website text,
+  verify_note text,
+  created_at timestamptz not null default now()
+);
+
+create table if not exists activities (
+  id text primary key,
+  place_id text references places(id) on delete set null,
+  title text not null,
+  category text not null,
+  latitude numeric(9,6) not null,
+  longitude numeric(9,6) not null,
+  description text not null,
+  guide_ids text[] not null default '{}',
+  provider_ids text[] not null default '{}',
+  created_at timestamptz not null default now()
+);
+
+create table if not exists plans (
+  id text primary key,
+  name text not null,
+  duration text not null,
+  style text not null,
+  activity_ids text[] not null default '{}',
+  guide_ids text[] not null default '{}',
+  provider_ids text[] not null default '{}',
+  includes text[] not null default '{}',
+  created_at timestamptz not null default now()
+);
+
+>>>>>>> 48d2867 (Actualizar pagina turismo Caribe colombiano)
 insert into places (id, name, region, categories, description, image_url, image_credit)
 values
   ('tayrona', 'Parque Tayrona', 'Santa Marta, Magdalena', array['naturaleza','playa'], 'Playas, selva seca tropical, senderos y miradores frente a la Sierra Nevada.', 'https://commons.wikimedia.org/wiki/Special:FilePath/Parque%20Nacional%20Natural%20Tayrona%207.jpg', 'Hugo A. Quintero G. / Wikimedia Commons'),
