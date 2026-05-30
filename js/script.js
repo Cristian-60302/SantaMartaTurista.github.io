@@ -22,63 +22,6 @@ const places = [
     credit: "Felipe Ortega Grijalba / Wikimedia Commons"
   },
   {
-<<<<<<< HEAD
-    id: "guajira",
-    name: "Cabo de la Vela",
-    region: "Uribia, La Guajira",
-    type: "naturaleza cultura playa",
-    short: "Desierto, mar, rancherias Wayuu y uno de los paisajes mas singulares del pais.",
-    description: "Un destino para viajar con calma y respeto por el territorio Wayuu. El contraste entre arena, viento y Caribe crea una experiencia completamente distinta a la playa tradicional.",
-    tips: ["Contrata transporte local", "Protector solar obligatorio", "Pregunta antes de fotografiar personas"],
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Cabo%20de%20la%20vela%20%28%20Guajira%20%29.jpg",
-    credit: "Kobaor / Wikimedia Commons"
-  },
-  {
-    id: "palomino",
-    name: "Palomino",
-    region: "Dibulla, La Guajira",
-    type: "playa naturaleza",
-    short: "Rio, playa, hostales tranquilos y vistas hacia la Sierra Nevada.",
-    description: "Palomino es un punto de encuentro entre viajeros, mar y montana. Es popular por sus playas extensas y recorridos por rio, pero conviene viajar con cuidado ambiental.",
-    tips: ["Evita dejar basura en la playa", "Consulta el estado del mar", "Apoya negocios locales"],
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Palomino%20beach.JPG",
-    credit: "Wikimedia Commons"
-  },
-  {
-    id: "san-andres",
-    name: "San Andres",
-    region: "Archipielago de San Andres",
-    type: "islas playa",
-    short: "Mar de siete colores, raizales, cayos y cultura insular caribena.",
-    description: "Mas que playas bonitas: San Andres tiene identidad raizal, gastronomia propia, arrecifes y una historia marcada por el Caribe occidental.",
-    tips: ["Cuida los corales", "Respeta la cultura raizal", "Reserva actividades nauticas responsables"],
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Andr%C3%A9s%20Island%20Colombia.JPG",
-    credit: "Roberto San Andres / Wikimedia Commons"
-  },
-  {
-    id: "barranquilla",
-    name: "Barranquilla",
-    region: "Atlantico",
-    type: "cultura",
-    short: "Carnaval, rio Magdalena, museos, musica y cocina popular.",
-    description: "Barranquilla es energia urbana del Caribe. Su carnaval es la gran fiesta, pero la ciudad tambien se disfruta en el Malecon del Rio, barrios tradicionales y espacios culturales.",
-    tips: ["Visita el Malecon", "Prueba comida local", "En carnaval reserva con anticipacion"],
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/GranMalecon1.jpg",
-    credit: "Jdvillalobos / Wikimedia Commons"
-  },
-  {
-    id: "mompox",
-    name: "Santa Cruz de Mompox",
-    region: "Bolivar",
-    type: "cultura naturaleza",
-    short: "Arquitectura colonial, filigrana, iglesias y vida lenta junto al rio Magdalena.",
-    description: "Mompox invita a bajar el ritmo. Es un destino historico del Caribe interior, perfecto para caminar, hablar con artesanos y mirar el rio al atardecer.",
-    tips: ["Camina el centro historico", "Compra filigrana a artesanos", "Lleva repelente"],
-    image: "https://commons.wikimedia.org/wiki/Special:FilePath/Calle%20real%204.JPG",
-    credit: "Wikimedia Commons"
-  },
-  {
-=======
     id: "minca",
     name: "Minca",
     region: "Santa Marta, Magdalena",
@@ -145,7 +88,6 @@ const places = [
     credit: "Wikimedia Commons"
   },
   {
->>>>>>> 48d2867 (Actualizar pagina turismo Caribe colombiano)
     id: "providencia",
     name: "Providencia",
     region: "Archipielago de San Andres",
@@ -185,8 +127,6 @@ const seededReviews = [
   }
 ];
 
-<<<<<<< HEAD
-=======
 const guides = [
   {
     id: "esneider",
@@ -410,17 +350,12 @@ const activities = [
   }
 ];
 
->>>>>>> 48d2867 (Actualizar pagina turismo Caribe colombiano)
 const storageKeys = {
   users: "ccv_users",
   session: "ccv_session",
   reviews: "ccv_reviews",
-<<<<<<< HEAD
-  visited: "ccv_visited"
-=======
   visited: "ccv_visited",
   guideRatings: "ccv_guide_ratings"
->>>>>>> 48d2867 (Actualizar pagina turismo Caribe colombiano)
 };
 
 const API_BASE_URL = "https://motosmart-api-vercel-github-io.vercel.app/api";
@@ -433,14 +368,11 @@ const nav = document.getElementById("nav");
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
 const destinationGrid = document.getElementById("destinationGrid");
-<<<<<<< HEAD
-=======
 const guideGrid = document.getElementById("guideGrid");
 const planGrid = document.getElementById("planGrid");
 const providerGrid = document.getElementById("providerGrid");
 const activityList = document.getElementById("activityList");
 const mapPanel = document.getElementById("mapPanel");
->>>>>>> 48d2867 (Actualizar pagina turismo Caribe colombiano)
 const reviewList = document.getElementById("reviewList");
 const visitedGrid = document.getElementById("visitedGrid");
 const authModal = document.getElementById("authModal");
@@ -568,8 +500,6 @@ function setUserVisited(ids) {
   write(storageKeys.visited, visited);
 }
 
-<<<<<<< HEAD
-=======
 function guideRatings(guideId) {
   return read(storageKeys.guideRatings, []).filter((rating) => rating.guideId === guideId);
 }
@@ -596,7 +526,6 @@ function addGuideRating(guideId, rating) {
   write(storageKeys.guideRatings, withoutPrevious);
 }
 
->>>>>>> 48d2867 (Actualizar pagina turismo Caribe colombiano)
 function stars(rating) {
   return "★★★★★".slice(0, Number(rating)).padEnd(5, "☆");
 }
@@ -650,8 +579,6 @@ function renderDestinations(filter = "todos") {
   }).join("");
 }
 
-<<<<<<< HEAD
-=======
 function renderGuides() {
   guideGrid.innerHTML = guides.map((guide) => {
     const score = guideAverage(guide.id);
@@ -735,7 +662,6 @@ function renderActivities(activeId = null) {
   `).join("");
 }
 
->>>>>>> 48d2867 (Actualizar pagina turismo Caribe colombiano)
 function renderReviews() {
   const reviews = allReviews().sort((a, b) => new Date(b.date) - new Date(a.date));
   reviewList.innerHTML = reviews.map((review) => `
@@ -785,8 +711,6 @@ function renderVisited() {
   }).join("");
 }
 
-<<<<<<< HEAD
-=======
 let activityMap = null;
 let activityMarkers = {};
 
@@ -843,7 +767,6 @@ function initActivityMap() {
   });
 }
 
->>>>>>> 48d2867 (Actualizar pagina turismo Caribe colombiano)
 function updateAuthUI() {
   const user = currentUser();
   const tripLogin = document.getElementById("tripLogin");
@@ -862,12 +785,9 @@ function refresh() {
   const activeFilter = document.querySelector(".filter.active")?.dataset.filter || "todos";
   updateAuthUI();
   renderDestinations(activeFilter);
-<<<<<<< HEAD
-=======
   renderGuides();
   renderPlans();
   renderProviders();
->>>>>>> 48d2867 (Actualizar pagina turismo Caribe colombiano)
   renderReviews();
   renderVisited();
 }
@@ -968,11 +888,8 @@ document.addEventListener("click", (event) => {
   const removeVisited = event.target.closest("[data-remove-visited]");
   const close = event.target.closest("[data-close]");
   const loginFromPlace = event.target.closest("[data-login-from-place]");
-<<<<<<< HEAD
-=======
   const rateGuide = event.target.closest("[data-rate-guide]");
   const activityCard = event.target.closest("[data-activity]");
->>>>>>> 48d2867 (Actualizar pagina turismo Caribe colombiano)
 
   if (openPlace) showPlace(openPlace.dataset.openPlace);
   if (visit) toggleVisited(visit.dataset.visit);
@@ -982,8 +899,6 @@ document.addEventListener("click", (event) => {
   }
   if (close) closeModal(close.dataset.close);
   if (loginFromPlace) openModal("authModal");
-<<<<<<< HEAD
-=======
   if (rateGuide) {
     if (!requireLogin()) return;
     const guideId = rateGuide.dataset.rateGuide;
@@ -992,7 +907,6 @@ document.addEventListener("click", (event) => {
     refresh();
   }
   if (activityCard) selectActivity(activityCard.dataset.activity);
->>>>>>> 48d2867 (Actualizar pagina turismo Caribe colombiano)
 });
 
 document.querySelectorAll("#loginOpen, #heroLogin, #tripLogin").forEach((button) => {
@@ -1053,8 +967,5 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-<<<<<<< HEAD
-=======
 initActivityMap();
->>>>>>> 48d2867 (Actualizar pagina turismo Caribe colombiano)
 refresh();

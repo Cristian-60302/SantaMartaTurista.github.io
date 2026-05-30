@@ -9,12 +9,9 @@ Proyecto academico de turismo sobre el Caribe colombiano. La pagina fue ajustada
 - Inicio de sesion conectado a `https://motosmart-api-vercel-github-io.vercel.app/api`.
 - Bitacora para marcar lugares visitados.
 - Resenas de usuarios guardadas en `localStorage`.
-<<<<<<< HEAD
-=======
 - Guias turisticos disponibles con calificacion por usuario.
 - Mapa interactivo de actividades con Leaflet y OpenStreetMap.
 - Planes sugeridos y entidades/operadores de referencia.
->>>>>>> 48d2867 (Actualizar pagina turismo Caribe colombiano)
 - Esquema SQL en `database/neon-schema.sql` para una futura conexion con Neon mediante backend/API.
 
 ## API de autenticacion
@@ -29,8 +26,5 @@ Si la API no responde por red o CORS, el sitio usa un fallback local en `localSt
 ## Nota sobre Neon
 
 GitHub Pages es estatico y no debe conectarse directamente a Neon porque expondria usuario, contrasena y cadena de conexion. Para usar Neon en produccion se necesita una API intermedia que reciba login, visitas y resenas, y luego consulte la base de datos.
-<<<<<<< HEAD
-=======
 
 El esquema tambien incluye tablas para `guides`, `guide_ratings`, `providers`, `activities` y `plans`, pensadas para que el mapa y las calificaciones pasen de `localStorage` a base de datos.
->>>>>>> 48d2867 (Actualizar pagina turismo Caribe colombiano)

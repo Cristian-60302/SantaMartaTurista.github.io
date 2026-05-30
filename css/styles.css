@@ -108,20 +108,12 @@ a {
 .nav-links {
   display: flex;
   align-items: center;
-<<<<<<< HEAD
-  gap: 24px;
-=======
   gap: 12px;
->>>>>>> 48d2867 (Actualizar pagina turismo Caribe colombiano)
 }
 
 .nav-links a {
   color: rgba(255, 255, 255, 0.84);
-<<<<<<< HEAD
-  font-size: 0.92rem;
-=======
   font-size: 0.8rem;
->>>>>>> 48d2867 (Actualizar pagina turismo Caribe colombiano)
   font-weight: 600;
   text-decoration: none;
 }
@@ -470,8 +462,6 @@ h3 {
   background: var(--night);
 }
 
-<<<<<<< HEAD
-=======
 .guides,
 .providers {
   background: var(--night);
@@ -697,7 +687,6 @@ h3 {
   text-decoration: none;
 }
 
->>>>>>> 48d2867 (Actualizar pagina turismo Caribe colombiano)
 .route-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -995,10 +984,7 @@ h3 {
   .intro,
   .section-head,
   .trip-card,
-<<<<<<< HEAD
-=======
   .map-layout,
->>>>>>> 48d2867 (Actualizar pagina turismo Caribe colombiano)
   .footer {
     grid-template-columns: 1fr;
   }

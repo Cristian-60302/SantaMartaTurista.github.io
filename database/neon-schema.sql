@@ -40,8 +40,6 @@ create table if not exists reviews (
 create index if not exists reviews_place_id_created_at_idx
   on reviews (place_id, created_at desc);
 
-<<<<<<< HEAD
-=======
 create table if not exists guides (
   id text primary key,
   name text not null,
@@ -98,7 +96,6 @@ create table if not exists plans (
   created_at timestamptz not null default now()
 );
 
->>>>>>> 48d2867 (Actualizar pagina turismo Caribe colombiano)
 insert into places (id, name, region, categories, description, image_url, image_credit)
 values
   ('tayrona', 'Parque Tayrona', 'Santa Marta, Magdalena', array['naturaleza','playa'], 'Playas, selva seca tropical, senderos y miradores frente a la Sierra Nevada.', 'https://commons.wikimedia.org/wiki/Special:FilePath/Parque%20Nacional%20Natural%20Tayrona%207.jpg', 'Hugo A. Quintero G. / Wikimedia Commons'),
